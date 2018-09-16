@@ -35,7 +35,7 @@ class PaginatedMixin(object):
         """
         Get the number of current page to pagination.
         """
-        return self.request.GET.get(self.page_kwarg)
+        return self.request.GET.get(self.page_kwarg, 0)
 
     def get_context_data(self, **kwargs):
         """
